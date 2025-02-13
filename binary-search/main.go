@@ -65,7 +65,7 @@ func IterativeBinarySearch2(arr []int, target int) int {
 		if midValue == target {
 			return mid // Target ditemukan, kembalikan indeksnya
 		} else if midValue < target {
-			right = mid - 1 // BUG: Seharusnya left = mid + 1 untuk mencari di bagian kanan
+			left = mid + 1 // BUG: Seharusnya left = mid + 1 untuk mencari di bagian kanan
 			// karena target lebih besar dari nilai tengah
 		} else {
 			right = mid - 1
